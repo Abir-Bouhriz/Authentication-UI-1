@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
           decoration: BoxDecoration(
             color: Color(0xff4577FA),
             borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(1000),
+              bottomRight: Radius.circular(500),
             ),
           ),
         ),
