@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sign_up_page/pages/login.dart';
 
 void main() =>
     runApp(MaterialApp(
-      home: SignUpPage(),
+      home: Login(),
     ));
 
-class SignUpPage extends StatefulWidget {
-  @override
-  _SignUpPageState createState() => _SignUpPageState();
-}
 
-class _SignUpPageState extends State<SignUpPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-     
-    );
-  }
-}
+
+
 
