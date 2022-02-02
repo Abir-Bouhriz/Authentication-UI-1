@@ -40,6 +40,56 @@ class _LoginState extends State<Login> {
                   fontWeight: FontWeight.bold),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+            child: TextField(
+              decoration: InputDecoration(
+                filled: true,
+                prefixIcon: Icon(
+                  FontAwesomeIcons.envelope,
+                  size: 17.0,
+                  color: Color(0xff4577FA),
+                ),
+                fillColor: Colors.white,
+                hintText: 'Email',
+                hintStyle: TextStyle(color: Color(0xffDBDBDB), fontSize: 14.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(color: Color(0xffCACACA), width: 1.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(color: Color(0xff0066B4), width: 2.0),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 20.0),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+            child: TextField(
+              decoration: InputDecoration(
+                filled: true,
+                prefixIcon: Icon(
+                  FontAwesomeIcons.lock,
+                  size: 17.0,
+                  color: Color(0xff4577FA),
+                ),
+                fillColor: Colors.white,
+                hintText: 'Password',
+                hintStyle: TextStyle(color: Color(0xffDBDBDB), fontSize: 14.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(color: Color(0xffCACACA), width: 1.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(color: Color(0xff0066B4), width: 2.0),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 10.0),
         ],
       ),
     );
