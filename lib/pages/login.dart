@@ -89,7 +89,26 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
-          SizedBox(height: 10.0),
+          SizedBox(height: 20.0),
+          Row(
+            //checkbox
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: RaisedButton(
+              padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+              textColor: Colors.white,
+              onPressed: () {},
+              color: Color(0xff4577FA),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25.0),
+              ),
+              child: Text(
+                'Log in with your account',
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ),
+          ),
         ],
       ),
     );
