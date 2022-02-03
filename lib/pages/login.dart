@@ -7,6 +7,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool checkedValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,10 +93,39 @@ class _LoginState extends State<Login> {
           ),
           SizedBox(height: 20.0),
           Row(
-            //checkbox
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Checkbox(
+                  checkColor: Colors.greenAccent,
+                  activeColor: Colors.red,
+                  value: checkedValue,
+                  onChanged: (bool value) {
+                    setState(
+                      () {
+                        this.checkedValue = value;
+                      },
+                    );
+                  },
+                  //controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
+                ),
+              ),
+              Text(
+                'Remember me ?',
+                style: TextStyle(fontSize: 13.0, color: Color(0xff4577FA)),
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Text(
+                  'Forgot password ?',
+                  style: TextStyle(fontSize: 13.0, color: Color(0xffDA4B36)),
+                ),
+              ),
+            ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: RaisedButton(
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
               textColor: Colors.white,
