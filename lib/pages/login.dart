@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
         elevation: 0,
         backgroundColor: Color(0xff4577FA),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.grey[400]),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {},
         ),
       ),
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             child: Text(
               'Log In',
               style: TextStyle(
@@ -91,14 +91,13 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
-          SizedBox(height: 20.0),
           Row(
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Checkbox(
-                  checkColor: Colors.greenAccent,
-                  activeColor: Colors.red,
+                  checkColor: Colors.white,
+                  activeColor: Color(0xff4577FA),
                   value: checkedValue,
                   onChanged: (bool value) {
                     setState(
