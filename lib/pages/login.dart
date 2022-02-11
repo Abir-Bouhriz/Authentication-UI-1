@@ -40,19 +40,22 @@ class _LoginState extends State<Login> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 20.0),
-                Text(
-                  'Log In',
-                  style: TextStyle(
-                      color: Color(0xff4577FA),
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(
+                        color: Color(0xff4577FA),
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
                 SizedBox(height: 20.0),
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
                     prefixIcon: Icon(
-                      FontAwesomeIcons.envelope,
+                      FontAwesomeIcons.solidEnvelope,
                       size: 17.0,
                       color: Color(0xff4577FA),
                     ),

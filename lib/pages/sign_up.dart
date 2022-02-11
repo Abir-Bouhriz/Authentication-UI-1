@@ -38,31 +38,34 @@ class _SignUpState extends State<SignUp> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 20.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Create',
-                      style: TextStyle(
-                          color: Color(0xff4577FA),
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'New Account',
-                      style: TextStyle(
-                          color: Color(0xff4577FA),
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Create',
+                        style: TextStyle(
+                            color: Color(0xff4577FA),
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'New Account',
+                        style: TextStyle(
+                            color: Color(0xff4577FA),
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 20.0),
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
                     prefixIcon: Icon(
-                      FontAwesomeIcons.snowman,
+                      FontAwesomeIcons.solidUser,
                       size: 17.0,
                       color: Color(0xff4577FA),
                     ),
@@ -87,7 +90,7 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration(
                     filled: true,
                     prefixIcon: Icon(
-                      FontAwesomeIcons.envelope,
+                      FontAwesomeIcons.solidEnvelope,
                       size: 17.0,
                       color: Color(0xff4577FA),
                     ),
