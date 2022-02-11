@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sign_up_page/pages/sign_up.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -71,7 +72,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                SizedBox(height: 18.0),
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -98,18 +99,21 @@ class _LoginState extends State<Login> {
                 ),
                 Row(
                   children: [
-                    Checkbox(
-                      checkColor: Colors.white,
-                      activeColor: Color(0xff4577FA),
-                      value: checkedValue,
-                      onChanged: (bool value) {
-                        setState(
-                          () {
-                            this.checkedValue = value;
-                          },
-                        );
-                      },
-                      //controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
+                    SizedBox(
+                      width: 30.0,
+                      child: Checkbox(
+                        checkColor: Colors.white,
+                        activeColor: Color(0xff4577FA),
+                        value: checkedValue,
+                        onChanged: (bool value) {
+                          setState(
+                            () {
+                              this.checkedValue = value;
+                            },
+                          );
+                        },
+                        //controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
+                      ),
                     ),
                     Text(
                       'Remember me ?',
@@ -125,17 +129,20 @@ class _LoginState extends State<Login> {
                   ],
                 ),
                 SizedBox(height: 20.0),
-                RaisedButton(
-                  padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
-                  textColor: Colors.white,
-                  onPressed: () {},
-                  color: Color(0xff4577FA),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                  child: Text(
-                    'Log in with your account',
-                    style: TextStyle(fontSize: 16.0),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 22.0),
+                  child: RaisedButton(
+                    padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
+                    textColor: Colors.white,
+                    onPressed: () {},
+                    color: Color(0xff4577FA),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                    child: Text(
+                      'Log in with your account',
+                      style: TextStyle(fontSize: 16.0),
+                    ),
                   ),
                 ),
                 SizedBox(height: 30.0),
@@ -148,58 +155,84 @@ class _LoginState extends State<Login> {
                 ),
                 SizedBox(height: 5.0),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    RaisedButton.icon(
-                      onPressed: () {},
-                      color: Color(0xff4577FA),
-                      icon: Icon(
-                        FontAwesomeIcons.facebook,
-                        size: 17.0,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        "Facebook",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RaisedButton.icon(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          onPressed: () {},
+                          color: Color(0xff4577FA),
+                          icon: Icon(
+                            FontAwesomeIcons.facebook,
+                            size: 17.0,
+                            color: Colors.white,
+                          ),
+                          label: Text(
+                            "Facebook",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
                       ),
                     ),
-                    RaisedButton.icon(
-                      onPressed: () {},
-                      color: Color(0xffDB4A39),
-                      icon: Icon(
-                        FontAwesomeIcons.google,
-                        size: 17.0,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        "Google",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RaisedButton.icon(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          onPressed: () {},
+                          color: Color(0xffDB4A39),
+                          icon: Icon(
+                            FontAwesomeIcons.google,
+                            size: 17.0,
+                            color: Colors.white,
+                          ),
+                          label: Text(
+                            "Google",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 100),
+                SizedBox(height: 80),
                 RaisedButton(
                   padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
                   textColor: Color(0xff4577FA),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => SignUp(),
+                      ),
+                    );
+                  },
                   elevation: 0,
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     side: BorderSide(color: Color(0xff4577FA), width: 1),
                   ),
-                  child: Text(
-                    'New user ? Create account',
-                    style: TextStyle(fontSize: 16.0,
-                    fontWeight: FontWeight.w300
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'New user ? ',
+                        style: TextStyle(
+                            fontSize: 16.0, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        ' Create account',
+                        style: TextStyle(
+                            fontSize: 16.0, fontWeight: FontWeight.normal),
+                      ),
+                    ],
                   ),
                 ),
               ],
