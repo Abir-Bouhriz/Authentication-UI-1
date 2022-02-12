@@ -18,7 +18,9 @@ class _SignUpState extends State<SignUp> {
         backgroundColor: Color(0xff4577FA),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Login()));
+          },
         ),
       ),
       body: Column(
@@ -187,7 +189,7 @@ class _SignUpState extends State<SignUp> {
                   padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
                   textColor: Color(0xff4577FA),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Login()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Login()));
                   },
                   elevation: 0,
                   color: Colors.white,

@@ -14,19 +14,11 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff4577FA),
-//        leading: IconButton(
-//          icon: Icon(Icons.arrow_back, color: Colors.white),
-//          onPressed: () {},
-//        ),
-      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            height: 80,
+            height: 180,
             decoration: BoxDecoration(
               color: Color(0xff4577FA),
               borderRadius: BorderRadius.only(
@@ -210,7 +202,7 @@ class _LoginState extends State<Login> {
                   padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
                   textColor: Color(0xff4577FA),
                   onPressed: () {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (context) => SignUp(),
                       ),
