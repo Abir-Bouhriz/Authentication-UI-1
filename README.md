@@ -31,7 +31,7 @@ Feel free to fork this project and add whatever you like. If you have any sugges
 * [Install Flutter](https://docs.flutter.dev/get-started/install)
 * [Flutter documentation](https://docs.flutter.dev/)
 
-For announcements about new releases and breaking changes, follow the flutter-announce@googlegroups.com mailing list.
+For announcements about new releases and breaking changes, follow the [flutter-announce@googlegroups.com](https://groups.google.com/g/flutter-announce) mailing list.
 
 
 
