@@ -5,7 +5,7 @@
 
 ## Description:
 
-This project is a starting point for a Flutter application.
+ Login and Sign up UI designed with flutter.
 
 ## ScreenShots:
 
