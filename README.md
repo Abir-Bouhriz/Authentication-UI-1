@@ -9,7 +9,7 @@ This project is a starting point for a Flutter application.
 
 ## ScreenShots:
 
-<img src="assets/Screenshot_1.jpg" width="200" /> <img src="assets/Screenshot_2.jpg" width="200" /> 
+<img src="assets/Screenshot_1.jpg" width="300" /> <img src="assets/Screenshot_2.jpg" width="300" /> 
 
 
 ## Tools & languages:
